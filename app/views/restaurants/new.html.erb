@@ -1,0 +1,11 @@
+<h2>Ajouter un restaurant</h2>
+
+<div class="m-2">
+<%= simple_form_for @restaurant do |r| %>
+  <%= r.input :name %>
+  <%= r.input :address %>
+  <%= r.input :phone_number %>
+  <%= r.input :category, collection: Restaurant::CATEGORIES %>
+  <%= r.button :submit %>
+<% end %>
+</div>

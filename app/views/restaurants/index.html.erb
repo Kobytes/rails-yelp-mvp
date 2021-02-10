@@ -1,0 +1,18 @@
+<h2>
+  Restaurants
+  <small class="text-muted">de Phillipo Estchebesto</small>
+</h2>
+
+<div class="restaurants">
+<ul class="list-group">
+<% @restaurants.each do |restaurant| %>
+  <%= link_to restaurant_path(restaurant) do%>
+    <li class="list-group-item"><%= restaurant.name %></li>
+    <% end %>
+<% end %>
+</ul>
+</div>
+
+<%= link_to new_restaurant_path do%>
+<p class="h6 m-3"><%= icon 'fas', 'pen' %> Ajouter un restaurant</p>
+<% end %>

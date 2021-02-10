@@ -1,0 +1,15 @@
+
+<div class="container-info">
+  <h1><%= @restaurant.name %></h1>
+  <small class="h4 text-muted"><%= @restaurant.address %></small>
+  <small class="h4 text-muted"><%= @restaurant.phone_number %></small>
+  <small class="h4 text-muted"><%= @restaurant.category %></small>
+
+<div class="reviews">
+  <h2 class="m-3">Reviews</h2>
+  <% @restaurant.reviews.each do |review|%>
+    <p class="text-justify"><%= review.id %>. <%= review.content %></p>
+  <% end %>
+</div>
+</div>
+
