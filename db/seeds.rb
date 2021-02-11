@@ -8,8 +8,8 @@
 
 require 'faker'
 
-puts 'Creating 5 restaurants...'
-5.times do
+puts 'Creating 100 restaurants...'
+100.times do
   restaurant = Restaurant.new(
     name: Faker::Restaurant.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
